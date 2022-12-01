@@ -2,10 +2,12 @@ databases:
   - name: kontests
     databaseName: kontests
     user: kontests
+    plan: free
 
 services:
   - type: web
     name: kontests
+    plan: free
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
