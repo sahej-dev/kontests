@@ -3,6 +3,6 @@
 set -o errexit
 
 bundle install
+rails db:create
 rails db:migrate
 gem install foreman
-foreman start
