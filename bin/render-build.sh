@@ -3,6 +3,8 @@
 set -o errexit
 
 bundle install
+bundle exec rake assets:precompile
+bundle exec rake assets:clean
 rails db:create
 rails db:migrate
 gem install foreman
